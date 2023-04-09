@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+body {
+    color: rgb(0, 0, 0);
+    background-color: rgb(169, 206, 211);
+    font-family: 'Open Sans';
+    font-size: 10px;
+}
+
+/*navbar*/
+
+.navbar {
+    background-color: rgb(6, 30, 97);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#logo {
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 30, 97);
+    font-size: 21px;
+    font-weight: bold;
+    font: 'Open Sans';
+    margin-left: 20px;
+}
+
+.navbar button{
+    background-color: rgba(65, 99, 192, 1);
+    color: white;
+    font: 17px "Open Sans";
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border:none;
+    margin: 20px;
+    transition: all 0.4s ease 0s;
+}
+
+.navbar button:hover {
+    background-color: rgba(65, 99, 192, 0.8);
+}
+
+/* stopwatch */
+
+#stopwatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.controllers div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+}
+
+.controllers button{
+    background-color: rgba(65, 99, 192, 1);
+    color: white;
+    font: 17px "Open Sans";
+    border:none;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    height: 45px;
+    border-radius: 10px;
+}
+
+.mode-control {
+    width: 120px;
+    margin: 7px;
+}
+
+.time-control {
+    width: 80px;
+    margin: 3px;
+}
+
+.controllers button:hover {
+    background-color: rgba(65, 99, 192, 0.8);
+}
+
+#stopwatch-display {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Share Tech', monospace;
+    color: rgb(49, 54, 50);
+    background-color: rgb(119, 128, 119);
+    margin: 20px;
+    padding: 10px;
+    border: 8px solid rgb(49, 54, 50);;
+}
+
+/* time config */
+
+#dropdown-menu {
+    position: absolute;
+    top: 105px;
+    right: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#dropdown-menu.open-menu {
+    max-height: 400px;
+}
+
+.customization-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px;
+    width: 250px;
+    height: 300px;
+    margin: 5px 10px;
+}
+
+.customization-menu * {
+    font: 17px "Open Sans";
+    margin: 5px;
+}
+
+.time-config {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#save-settings {
+    background-color: rgba(65, 99, 192, 1);
+    color: white;
+    font: 17px "Open Sans";
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border:none;
+    margin: 20px;
+    padding: 3px;
+    transition: all 0.4s ease 0s;
+}
+
+.time-config button {
+    color: white;
+    background-color: rgba(65, 99, 192, 1);
+    border-radius: 50%;
+    width: 26px;
+    margin: 5px;
+    border: none;
+
+}
+
+.time-config button:hover {
+    background-color: rgba(65, 99, 192, 0.8);
+}
+
+.time-config-data {
+    font-family: 'Share Tech', monospace;
+    font-size: 30px;
+    margin: 0px 10px;
+}
