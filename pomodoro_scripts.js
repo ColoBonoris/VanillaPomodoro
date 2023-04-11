@@ -68,11 +68,11 @@ function openMenu(){
 }
 
 function moreRelapse(){
-    relapseSetting = addMinute(relapseSetting);
+    relapseSetting = add5Minutes(relapseSetting);
     updateRelapse();
 }
 function lessRelapse(){
-    relapseSetting = substractMinute(relapseSetting);
+    relapseSetting = substract5Minutes(relapseSetting);
     updateRelapse();
 }
 function updateRelapse(){
@@ -80,11 +80,11 @@ function updateRelapse(){
     else document.getElementById("relapse-time").innerHTML = relapseSetting + ":00";
 }
 function moreWork(){
-    workSetting = addMinute(workSetting);
+    workSetting = add5Minutes(workSetting);
     updateWork();
 }
 function lessWork(){
-    workSetting = substractMinute(workSetting);
+    workSetting = substract5Minutes(workSetting);
     updateWork();
 }
 function updateWork(){
@@ -92,14 +92,14 @@ function updateWork(){
     else document.getElementById("work-time").innerHTML = workSetting + ":00";
 }
 
-function addMinute(minutes){
+function add5Minutes(minutes){
     if(minutes == 90) return minutes;
-    return minutes + 1;
+    return minutes + 5;
 }
 
-function substractMinute(minutes){
+function substract5Minutes(minutes){
     if(minutes == 0) return minutes;
-    return minutes - 1;
+    return minutes - 5;
 }
 
 function relapse(){
@@ -110,9 +110,4 @@ function relapse(){
 function work(){
     working = true;
     resetTimer();
-}
-
-function saveSettings(){
-    workSetting = Number(document.getElementById("work-time").innerHTML.split(":")[0]);
-    relapseSetting = Number(document.getElementById("relapse-time").innerHTML.split(":")[0]);
 }
