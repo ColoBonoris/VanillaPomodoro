@@ -192,6 +192,9 @@ body {
         margin-top: 100px;
         max-width: 100%;
     }
+    .controllers {
+        max-width: 100%;
+    }
     #logo {
         font-size: 18px;
     }
