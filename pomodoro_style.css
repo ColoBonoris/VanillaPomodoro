@@ -185,7 +185,7 @@ body {
     margin: 0px 10px;
 }
 
-@media screen {
+@media screen and (max-width: 728px) {
     #stopwatch {
         margin-top: 100px;
         width: 80%;
