@@ -66,7 +66,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .controllers div {
@@ -81,8 +81,7 @@ body {
     background-color: rgba(65, 99, 192, 1);
     color: white;
     font: 17px "Open Sans";
-    border:none;
-    cursor: pointer;
+    border: none;
     transition: all 0.4s ease 0s;
     height: 45px;
     border-radius: 10px;
@@ -188,14 +187,21 @@ body {
 }
 
 @media screen and (max-width: 728px) {
-    #stopwatch {
-        margin-top: 100px;
-        max-width: 100%;
-    }
-    .controllers {
+    
+    .controllers div {
         max-width: 100%;
     }
     #logo {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .controllers div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .controllers button{
+        width: 90vw;
     }
 }
