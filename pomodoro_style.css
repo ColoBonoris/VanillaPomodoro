@@ -37,6 +37,7 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(6, 30, 97);
     font-size: 21px;
+    text-align: center;
     font-weight: bold;
     font: 'Open Sans';
     margin-left: 20px;
@@ -189,6 +190,8 @@ body {
 @media screen and (max-width: 728px) {
     #stopwatch {
         margin-top: 100px;
-        width: 80%;
+    }
+    #logo {
+        font-size: 18px;
     }
 }
