@@ -184,3 +184,10 @@ body {
     font-size: 30px;
     margin: 0px 10px;
 }
+
+@media screen {
+    #stopwatch {
+        margin-top: 100px;
+        width: 80%;
+    }
+}
