@@ -11,9 +11,10 @@
     <script src="./pomodoro_scripts.js"></script>
     <body>
         <ul class="navbar">
-            <li><a id="logo" href="./index.html">Pomodoro Stopwatch</a></li>
+            <li class="logo"><a class="logo" href="./index.html">Pomodoro Stopwatch</a></li>
             <li><button onclick="openMenu()">Customize</button></li>
         </ul>
+        <nav class="status-div"><h2 id="status-text">Working!</h2></nav>
         <nav id="dropdown-menu"> 
             <div class="customization-menu">
                 <h3>Work Time</h3>
@@ -33,12 +34,12 @@
             </div>
         </nav>
         <div id="stopwatch">
-            <div class="controllers">
-                <button onclick="work()" class="mode-control">Work</button>
-                <button onclick="relapse()" class="mode-control">Relapse</button>
+            <div class="controllers mode">
+                <button onclick="work()" class="mode-control" id="work-button">Work</button>
+                <button onclick="relapse()" class="mode-control" id="relapse-button">Relapse</button>
             </div>
             <div id="stopwatch-display">00:00</div>
-            <div class="controllers">
+            <div class="controllers time">
                 <button class="time-control" onclick="startTimer()">Start</button>
                 <button class="time-control" onclick="stopTimer()">Stop</button>
                 <button class="time-control" onclick="resetTimer()">Reset</button>

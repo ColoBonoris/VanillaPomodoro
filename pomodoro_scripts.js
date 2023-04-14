@@ -103,11 +103,23 @@ function substract5Minutes(minutes){
 }
 
 function relapse(){
-    working = false;
-    resetTimer();
+    if(working){
+        working = false;
+        resetTimer();
+        document.getElementById("status-text").innerHTML = "Relapsing :)";
+        document.getElementById("status-text").classList.add("relapsing");
+        document.getElementById("work-button").classList.remove("current-mode-button");
+        document.getElementById("relapse-button").classList.add("current-mode-button");
+    }    
 }
 
 function work(){
-    working = true;
-    resetTimer();
+    if(! working){
+        working = true;
+        resetTimer();
+        document.getElementById("status-text").innerHTML = "Working!";
+        document.getElementById("status-text").classList.remove("relapsing");
+        document.getElementById("work-button").classList.add("current-mode-button");
+        document.getElementById("relapse-button").classList.remove("current-mode-button");
+    }
 }
