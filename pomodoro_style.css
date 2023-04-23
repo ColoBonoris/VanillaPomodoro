@@ -85,10 +85,11 @@ a.logo {
     padding: 0.6rem 1.2rem;
     transition: all 0.4s ease 0s;
     border-radius: 10px;
+    border-width: 0px;
 }
 
-.current-mode-button {
-    border: 5px ;
+button.current-mode-button {
+    border-width: 5px;
     border-style: solid;
     border-color: rgb(64, 64, 64)
 }
@@ -126,11 +127,13 @@ a.logo {
     top: 6.5rem;
     right: 0.3rem;
     max-height: 0rem;
-    overflow: hidden;
     transition: max-height 0.5s;
+    max-height: 0px;
+    display: none;
 }
 
 #dropdown-menu.open-menu {
+    display: block;
     max-height: 25rem;
 }
 
@@ -140,8 +143,10 @@ a.logo {
     justify-content: top;
     align-items: center;
     background-color: white;
+    border-radius: 10px;
     padding: 0.8rem;
-    box-shadow: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    /*queda horrible, pero hay que hacer un override al overflow*/
     width: 15rem;
     height: 15.4rem;
     margin: 0rem 0.5rem;
